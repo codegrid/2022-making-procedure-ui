@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    ol {
+      list-style: none;
+    }
+    li::before {
+      content: "[" counter(list-item) "]";
+    }
+  </style>
+</head>
+<body>
+
+<h2>list-itemカウンターを利用する</h2>
+
+<ol>
+  <li>aaaa</li>
+  <li>bbbb</li>
+  <li>cccc</li>
+</ol>
+
+<h2>さらにstart="3"を指定</h2>
+
+<ol start="3">
+  <li>aaaa</li>
+  <li>bbbb</li>
+  <li>cccc</li>
+</ol>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <style>
+    /* 見出し */
+    h2 {
+      margin: 0 auto 20px;
+      font-size: 28px;
+      max-width: 680px;
+    }
+
+    /* 工程 */
+    ol {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 200px);
+      gap: 40px;
+      list-style: none;
+      max-width: 680px; /* 列幅 * 3 + 列間のgap * 2 */
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      counter-increment: item;
+    }
+
+    li::before {
+      content: counter(item);
+    }
+
+    li img {
+      border-radius: 4px;  
+    }
+
+    li span {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<h2>作り方</h2>
+<ol>
+  <li>
+    <img src="./img/recipe-01.png" alt="写真：10cmに切られた大根" width="200" height="151">
+    <span>大根を10cm程度に切ります。</span>
+  </li>
+  <li>
+    <img src="./img/recipe-02.png" alt="写真：皮をむかれた大根とむかれた皮" width="200" height="151">
+    <span>大根の皮を剥きます。</span>
+  </li>
+  <li>
+    <img src="./img/recipe-03.png" alt="写真：縦に4等分された大根" width="200" height="151">
+    <span>縦に4等分に切ります。</span>
+  </li>
+  <li>
+    <img src="./img/recipe-04.png" alt="写真：5mm幅に切られた大根" width="200" height="151">
+    <span>切り口を下にして、端から5mmくらいの幅で均等に切ります。</span>
+  </li>
+  <li>
+    <span>大根のいちょう切りの完成です</span>
+    </li>
+  <!-- 以下工程が続く... -->
+</ol> 
+
+</body>
+</html>
