@@ -21,14 +21,14 @@
       max-width: 680px; /* 列幅 * 3 + 列間のgap * 2 */
       margin: 0 auto;
       padding: 0;
-      counter-reset: list-item;
+      counter-reset: item;
     }
 
     li {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      counter-increment: list-item;
+      counter-increment: item;
     }
 
     li::before {
@@ -41,7 +41,7 @@
       line-height: 1;
       background-color: #518300;
       color: #fff;
-      content: counter(list-item);
+      content: counter(item);
     }
 
     li img {
